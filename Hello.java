@@ -1,3 +1,3 @@
-public main() {
-    IO.println("Hello, World!");
+void main() {
+   IO.println("Hello World!");
 }
