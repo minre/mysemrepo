@@ -1,0 +1,38 @@
+@startuml
+title Morgenroutine
+
+start
+
+:Aufwachen;
+:Wecker ausschalten;
+
+if (Früh genug?) then (Ja)
+  :Im Bett strecken;
+else (Nein)
+  :Schnell aufstehen;
+endif
+
+:Ins Bad gehen;
+:Zähne putzen;
+:Duschen;
+
+if (Frühstück machen?) then (Ja)
+  :Kaffee kochen;
+  :Brot oder Müsli zubereiten;
+else (Nein)
+  :Nur Kaffee trinken;
+endif
+
+:Anziehen;
+
+fork
+  :Nachrichten lesen;
+fork again
+  :Handy checken;
+fork again
+  :To-do-Liste für den Tag prüfen;
+end fork
+
+:Wohnung verlassen;
+stop
+@enduml
