@@ -29,5 +29,7 @@ jobs:
           java Hello.java
       - name: Render Documentation
         run: |
-          ./documentation/render.sh
+          chmod +x ./render.sh
+          ./render.sh
+          working-directory: documentation
       - run: echo "🍏 This job's status is ${{ job.status }}."
