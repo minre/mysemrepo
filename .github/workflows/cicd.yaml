@@ -27,4 +27,8 @@ jobs:
         run:
           java -version
           java Hello.java
+      - name: Render Documentation
+        run: |
+          ./render.sh
+          working-directory: documentation
       - run: echo "🍏 This job's status is ${{ job.status }}."
