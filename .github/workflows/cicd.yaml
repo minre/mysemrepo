@@ -16,6 +16,16 @@ jobs:
         run: |
           pwd
           ls ${{ github.workspace }}
+      - name: Setup Dependencies
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: 'maven'
+          #cache-dependency-path: 'sub-project/pom.xml' # optional
+      - run: |
+          javac Hello.java
       - run:
+          java -version
           java Hello.java
       - run: echo "🍏 This job's status is ${{ job.status }}."
