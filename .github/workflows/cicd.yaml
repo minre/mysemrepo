@@ -23,9 +23,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
           cache-dependency-path: 'backend/pom.xml' # optional
-      - run: |
-          javac Hello.java
-      - run:
+      - name: Compile and Run Java Program
+        run:
           java -version
           java Hello.java
       - run: echo "🍏 This job's status is ${{ job.status }}."
